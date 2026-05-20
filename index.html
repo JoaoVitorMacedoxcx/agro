@@ -1,60 +1,45 @@
-<html lang="pt-BR">
+# 🌾 Agrinho 2026 - Meu Projeto Front-End Interativo e Acessível
 
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
-    <title>BOSCOVFLIX</title>
-</head>
+Olá! 👋 Este é o repositório do meu projeto desenvolvido para o **Agrinho 2026** (Categoria Desenvolvimento Front-End). O objetivo foi criar um site moderno, responsivo e totalmente focado na **experiência do usuário (UX)** e na **inclusão**.
 
-<body>
-    <header>BOSCOVFLIX</header>
+Aqui está como eu estruturei o código do projeto para atender a todos os requisitos solicitados:
 
-    <section class="chamada">
-        <div class="chamada-texto">
-            <h1>"Pobres Criaturas": como descrever? Assim: é bárbaro</h1>
-            <p>#oscar-winner</p>
-        </div>
+---
 
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/DqBPV9-7kJc?si=igJsp0Tj3z2uf-FC"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
+## ✨ Interatividade: Como deixei o site "vivo" (CSS)
 
-    <section class="categoria">
-        <h2>Filmes e séries</h2>
-        <div class="categoria-videos">
-            <a href="https://www.youtube.com/watch?v=0_l3fqKBubU">
-                <img src="https://img.youtube.com/vi/0_l3fqKBubU/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=j_IULSNSBuE">
-                <img src="https://img.youtube.com/vi/j_IULSNSBuE/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=IlpUAEFmZD0">
-                <img src="https://img.youtube.com/vi/IlpUAEFmZD0/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=yzynBLih7Kc">
-                <img src="https://img.youtube.com/vi/yzynBLih7Kc/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=U9yWlIZd7SM">
-                <img src="https://img.youtube.com/vi/U9yWlIZd7SM/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=51Qtjqr7tBc">
-                <img src="https://img.youtube.com/vi/51Qtjqr7tBc/maxresdefault.jpg" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=kM-EsKCSd-M">
-                <img src="https://img.youtube.com/vi/kM-EsKCSd-M/maxresdefault.jpg" />
-            </a>
+Para criar interfaces agradáveis e dar um feedback visual ao usuário, apliquei as seguintes regras de CSS nos elementos interativos (como botões e cards):
 
-        </div>
-    </section>
+### 🛠️ Meu Código CSS de Interatividade:
+```css
+/* Estilo base do botão/card interativo */
+.componente-interativo {
+  background-color: #1b5e20; /* Verde Agrinho */
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  
+  /* 1. Cantos suavizados e cursor de mãozinha */
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* 2. Sombra leve inicial para dar profundidade */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  /* Transição fluida para todos os efeitos */
+  transition: all 0.3s ease;
+}
 
-</body>
+/* 3. Efeito :hover (Passar o mouse) */
+.componente-interativo:hover {
+  background-color: #2e7d32;
+  
+  /* A sombra aumenta, dando a ideia de que o elemento "subiu" */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-</html>
+/* 4. Efeito :active (Ao clicar) */
+.componente-interativo:active {
+  /* O elemento "encolhe" levemente, dando sensação tátil */
+  transform: scale(0.95);
+}
